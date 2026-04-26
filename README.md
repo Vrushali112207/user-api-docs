@@ -1,8 +1,8 @@
 #User Managemnt API Documentation
-##Base URL
+## Base URL
 http://localhost:8080/API
 ## 1.User Signup
-###Endpoint
+### Endpoint
 POSTS/User/signup
 ### Request Body
 { name:"Vrushali Sharma",
