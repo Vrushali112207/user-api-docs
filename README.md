@@ -23,7 +23,8 @@ Authorization Bearer <your token>
 ---  
 ## User Signup
 ### Endpoint
-POST/User/signup
+'POST/User/signup'
+### Description
 ### Creates a user account
 ### Request Body
 --json
@@ -39,13 +40,13 @@ POST/User/signup
 }
 Error Response(400 Bad Request)
 {
-"error" :"User already exits"
+"error" :"Email already exits"
 }
 --json
 
  ## User Login
  Endpoint
-POSTS/Users/login
+POST/Users/login
  Description
 Authenticate the user and provides JWT Token
 ### Request Body
@@ -61,8 +62,8 @@ Response(200 OK)
 }
 ## Get User Profile
 'GET/users/profile'
-### Fetches the profile of authenticated users
-Header
+### Fetches the profile of authenticated user.
+Headers
 ### Authorization: Bearer <your token>
 ### Response(200 OK)
 --json
