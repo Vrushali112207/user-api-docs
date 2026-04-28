@@ -1,5 +1,16 @@
 # *User Managemnt API*
+
 A RESTful API for managing user accounts,including signup,login and profile retreival.
+
+## Table of contents
+ - [Base URL](#base-url)
+ - [Authentication](#authentication)
+ - [User Signup](#user-signup)
+ - [User Login](#user-login)
+ - [Get User Profile](#get-user-profile)
+ - [Error Codes](#error-codes)
+ - [Example Request](#example-request)
+
 ---
 ## Base URL
 http://localhost:8080/API
@@ -7,12 +18,12 @@ http://localhost:8080/API
 ## Authentication
 
 This API uses **Bearer Token Authentication**.
-Include the token in headers:
+Include the token in the request headers:
 Authorization Bearer <your token>
-
-## 1.User Signup
+---  
+## User Signup
 ### Endpoint
-POSTS/User/signup
+POST/User/signup
 ### Creates a user account
 ### Request Body
 --json
@@ -20,7 +31,7 @@ POSTS/User/signup
   email:"vrushaliabhale@example.com",
   password:"vrush123"
 }
-### Response(201 created)
+ Response(201 created)
 --json
 {
 "message" :"User created Successfully",
@@ -32,11 +43,10 @@ Error Response(400 Bad Request)
 }
 --json
 
-
-## 2.User Login
-### Endpoint
+ ## User Login
+ Endpoint
 POSTS/Users/login
-### Description
+ Description
 Authenticate the user and provides JWT Token
 ### Request Body
 --json
@@ -49,9 +59,10 @@ Response(200 OK)
 {
 "token"=<your token>
 }
-## 3. Get User Profile
+## Get User Profile
 'GET/users/profile'
 ### Fetches the profile of authenticated users
+Header
 ### Authorization: Bearer <your token>
 ### Response(200 OK)
 --json
@@ -75,3 +86,5 @@ Response(200 OK)
 curl -X POST http://localhost:8080/api/users/signup \
 -H "Content-Type: application/json" \
 -d '{"name":"Vrushali","email":"vrushaliabhale@example.com","password":"vrush123"}'
+
+
