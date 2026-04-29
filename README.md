@@ -58,12 +58,26 @@ Authorization Bearer <your token>
 'POST/User/signup'
 ### Description
 ### Creates a user account
+### Request fields
+
+|Field   | Type |Required|  Description    |
+|--------|------|--------|-----------------|
+|name    |string| Yes    |Full name of user|
+|email   |string| Yes    |Email of user    |
+|password|string| Yes    |Account password |
+
 ### Request Body
 --json
 { name:"Vrushali Sharma",
   email:"vrushaliabhale@example.com",
   password:"vrush123"
 }
+---
+### Response Fields
+|Field  | Type |Description           |
+|-------|------|----------------------|
+|message|string|Success message       |
+|userId |string|Unique user identifier|
 
 Response(201 created)
 --json
@@ -71,7 +85,7 @@ Response(201 created)
 "message" :"User created Successfully",
 "userId":"1234"
 }
-
+---
 Error Response(400 Bad Request)
 {
 "error" :"Email already exits"
@@ -127,7 +141,7 @@ Headers
 Example header :
 ---
 Authorization: Bearer<your token>
-
+---
  ## Example Request
 
 ```bash
