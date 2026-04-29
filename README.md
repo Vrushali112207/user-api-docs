@@ -1,6 +1,11 @@
 # *User Managemnt API*
 
-A RESTful API for managing user accounts,including signup,login and profile retreival.
+##Overview
+This API allows user to:
+Create an account(Signup)
+Authenticate and receive a token(Login)
+Access protected user data
+It demonstrates RESTful API design with token based authentication.
 
 ## Table of contents
  - [System Architecture](#system-architecture)
@@ -26,6 +31,12 @@ flowchart LR
     E --> F[Validate Token]
     F --> C
 ```
+
+##Preriquisites
+-Java 8
+-Any testing tools
+
+
 ## Base URL
 http://localhost:8080/API
 ---
@@ -94,6 +105,16 @@ Headers
   |400        |Bad Request |
   |401        |Unauthorized|
   |500        |Server Error|
+
+
+## How to use
+1. Register a new user using the Signup API.
+2. Login to receive authentication token.
+3. Use the token in authentication header.
+4. Access protected endpoints like Get Profile.
+Example header :
+---
+Authorization: Bearer<your token>
 
  ## Example Request
 
