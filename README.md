@@ -11,6 +11,20 @@ A RESTful API for managing user accounts,including signup,login and profile retr
  - [Error Codes](#error-codes)
  - [Example Request](#example-request)
 ---
+## System Architecture
+
+```mermaid
+flowchart LR
+    A[User] --> B[Signup/Login API]
+    B --> C[Database]
+
+    B --> D[Generate Token]
+    D --> A
+
+    A --> E[Get Profile API]
+    E --> F[Validate Token]
+    F --> C
+```
 ## Base URL
 http://localhost:8080/API
 ---
