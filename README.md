@@ -139,10 +139,6 @@ Headers
 2. Login to receive authentication token.
 3. Use the token in authentication header.
 4. Access protected endpoints like Get Profile.
-Example header:
-```
-Authorization: Bearer <your_token>
----
 
  ## Example Request
 
