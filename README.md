@@ -67,10 +67,11 @@ Authorization Bearer <your token>
 |password|string| Yes    |Account password |
 
 ### Request Body
+
 --json
-{ name:"Vrushali Sharma",
-  email:"vrushaliabhale@example.com",
-  password:"vrush123"
+{name:"Vrushali Sharma",
+ email:"vrushaliabhale@example.com",
+ password:"vrush123"
 }
 ---
 ### Response Fields
@@ -125,7 +126,7 @@ Headers
  
 ## Error Codes
   |Status Code|Description |
-  |----------------------- |
+  |-----------|----------- |
   |200        |Success     |
   |201        |Created     |
   |400        |Bad Request |
@@ -138,10 +139,11 @@ Headers
 2. Login to receive authentication token.
 3. Use the token in authentication header.
 4. Access protected endpoints like Get Profile.
-Example header :
+Example header:
+```
+Authorization: Bearer <your_token>
 ---
-Authorization: Bearer<your token>
----
+
  ## Example Request
 
 ```bash
