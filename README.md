@@ -3,6 +3,7 @@
 A RESTful API for managing user accounts,including signup,login and profile retreival.
 
 ## Table of contents
+ - [System Architecture](#system-architecture)
  - [Base URL](#base-url)
  - [Authentication](#authentication)
  - [User Signup](#user-signup)
