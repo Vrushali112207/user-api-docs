@@ -1,10 +1,15 @@
 # *User Managemnt API*
 
 ##Overview
+
 This API allows user to:
-Create an account(Signup)
-Authenticate and receive a token(Login)
-Access protected user data
+
+-Create an account(Signup)
+
+-Authenticate and receive a token(Login)
+
+-Access protected user data
+
 It demonstrates RESTful API design with token based authentication.
 
 ## Table of contents
@@ -33,7 +38,9 @@ flowchart LR
 ```
 
 ##Preriquisites
+
 -Java 8
+
 -Any testing tools
 
 
@@ -57,12 +64,14 @@ Authorization Bearer <your token>
   email:"vrushaliabhale@example.com",
   password:"vrush123"
 }
- Response(201 created)
+
+Response(201 created)
 --json
 {
 "message" :"User created Successfully",
 "userId":"1234"
 }
+
 Error Response(400 Bad Request)
 {
 "error" :"Email already exits"
@@ -72,15 +81,17 @@ Error Response(400 Bad Request)
  ## User Login
  Endpoint
 POST/Users/login
- Description
+
+Description
 Authenticate the user and provides JWT Token
+
 ### Request Body
---json
+
 {
 "email":"vrushaliabhale@example.com",
 "password":"vrush123"
 }
---json
+
 Response(200 OK)
 {
 "token"=<your token>
@@ -91,12 +102,13 @@ Response(200 OK)
 Headers
 ### Authorization: Bearer <your token>
 ### Response(200 OK)
---json
+
  {
  "userid":"1234",
  "name":"Vrushali",
  "email":"vrushaliabhale@example.com"
  }
+ 
 ## Error Codes
   |Status Code|Description |
   |----------------------- |
