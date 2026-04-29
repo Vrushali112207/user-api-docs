@@ -10,7 +10,6 @@ A RESTful API for managing user accounts,including signup,login and profile retr
  - [Get User Profile](#get-user-profile)
  - [Error Codes](#error-codes)
  - [Example Request](#example-request)
-
 ---
 ## Base URL
 http://localhost:8080/API
