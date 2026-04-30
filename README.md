@@ -1,18 +1,18 @@
-# *User Managemnt API*
+# User Management API*
 
-##Overview
+![API](https://img.shields.io/badge/API-REST-blue)
+![Status](https://img.shields.io/badge/status-active-success)
 
-This API allows user to:
+A RESTful API for managing user accounts, including signup, login, and profile retrieval.
 
--Create an account(Signup)
+---
 
--Authenticate and receive a token(Login)
-
--Access protected user data
-
-It demonstrates RESTful API design with token based authentication.
+## API Version
+Current Version: v1
 
 ## Table of contents
+ - [Overview](#overview)
+ - [Prerequisites](#prerequisites)
  - [System Architecture](#system-architecture)
  - [Base URL](#base-url)
  - [Authentication](#authentication)
@@ -22,6 +22,21 @@ It demonstrates RESTful API design with token based authentication.
  - [Error Codes](#error-codes)
  - [Example Request](#example-request)
 ---
+##  Overview
+
+This API allows users to:
+- Create an account (Signup)
+- Authenticate and receive a token (Login)
+- Access protected user data (Profile)
+
+It demonstrates RESTful API design with token-based authentication.
+
+---
+
+## Prerequisites
+
+- Java 8+
+- Postman or any API testing tool
 ## System Architecture
 
 ```mermaid
@@ -133,7 +148,11 @@ Headers
   |401        |Unauthorized|
   |500        |Server Error|
 
-
+### Status Code details
+-**200 OK** -> Request Successful
+-**201 Created** -> Resource Created Successfully
+-**400 Unauthorized** -> Missing or invalid token
+-**500 Server Error** -> Internal server issue
 ## How to use
 1. Register a new user using the Signup API.
 2. Login to receive authentication token.
@@ -150,5 +169,12 @@ Authorization: Bearer <your_token>
 curl -X POST http://localhost:8080/api/users/signup \
 -H "Content-Type: application/json" \
 -d '{"name":"Vrushali","email":"vrushaliabhale@example.com","password":"vrush123"}'
+
+---
+Notes
+-All responses are in json format
+-Ensure validation on client side
+-Token should stored securely
+--- 
 
 
